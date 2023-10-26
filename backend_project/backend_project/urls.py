@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 from backend_app import views as backend_app_views
-# from accounts import views as accounts_views
+from accounts import views as accounts_views
 from rest_framework_simplejwt import views as jwt_views
 
 router = routers.DefaultRouter()
@@ -28,7 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('url/', include('backend_app.urls')),
-    # path('login/', accounts_views.LoginView.as_view(), name='login'),
+    path('register/', accounts_views.RegisterView.as_view(), name='register'),
     path('logout/', backend_app_views.LogoutView.as_view(), name ='logout'),
     path('token/', 
         backend_app_views.CustomTokenObtainPairView.as_view(), 
