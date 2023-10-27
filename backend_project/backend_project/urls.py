@@ -27,7 +27,7 @@ router.register(r'urls', backend_app_views.URLViewSet, basename='urls')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('url/', include('backend_app.urls')),
+    path('url/', include('backend_project.backend_app.urls')),
     path('register/', accounts_views.RegisterView.as_view(), name='register'),
     path('logout/', backend_app_views.LogoutView.as_view(), name ='logout'),
     path('token/', 
