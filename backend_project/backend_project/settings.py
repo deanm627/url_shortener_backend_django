@@ -61,7 +61,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-ROOT_URLCONF = 'backend_project.urls'
+ROOT_URLCONF = 'backend_project.backend_project.urls'
 
 TEMPLATES = [
     {
