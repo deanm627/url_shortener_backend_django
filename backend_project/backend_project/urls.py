@@ -17,8 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from backend_app import views as backend_app_views
-from accounts import views as accounts_views
+from backend_project.backend_app import views as backend_app_views
+from backend_project.accounts import views as accounts_views
 from rest_framework_simplejwt import views as jwt_views
 
 router = routers.DefaultRouter()
